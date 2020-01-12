@@ -1,6 +1,6 @@
 ---
 layout: page
-title: My Blog
+title: Blog
 ---
 
 This is blog page

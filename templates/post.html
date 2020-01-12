@@ -19,8 +19,8 @@
       <p class="a-title">
         {{data.page.title}}
       </p>
-      <p class="a-date">{{data.page.date}}</p>
-      <p class="a-author">{{data.page.author}}</p>
+      <p class="a-date">{{data.page.date or data.page.datetime}}</p>
+      <p class="a-author">{{data.page.author or data.site.author}}</p>
     </section>
 
     <div class="content markdown-body">
