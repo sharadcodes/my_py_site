@@ -10,7 +10,7 @@ simplest and lightweight static site generator out there, with less than
 just two hours** but the development will go further and enhancements
 will be done in the future to make things more easy.
 
-With approx 120 lines of code it becomes the smallest Static Site 
+With approx 90 lines of code it becomes the smallest Static Site 
 Generator which is capable of generating multiple pages, blogs.
 
 The documentation is going on, although you won't need because it's
