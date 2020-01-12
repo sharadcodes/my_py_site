@@ -1,6 +1,6 @@
 # my_py_site
 
-The most simplest and lightweight static site and blog generator for Python lovers.
+The world's smallest and lightweight static site and blog generator for Python lovers.
 
 [my_py_site](https://github.com/sharadcodes/my_py_site) is the most 
 simplest and lightweight static site generator out there, with less than
@@ -24,5 +24,3 @@ and the site will be generated.
 
 
 >Developer: [Sharad Raj](https://sharadcodes.github.io)
-
-## Documentation in progress
