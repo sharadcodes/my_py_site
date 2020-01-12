@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{data.site.title}} | {{data.page.title}}</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
+
   <body>
-    <div>
+    <nav>
+      {% for i in data.nav_links %}
+      <a href="/{{i.url}}">{{ i.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <section class="hero center">
+      {{data.page.title}}
+    </section>
+
+    <div class="content markdown-body">
       {{data.page.content}}
     </div>
+
+    <footer>
+      <p>
+        &copy; {{data.site.year}} {{data.site.title}}
+      </p>
+    </footer>
   </body>
 </html>
