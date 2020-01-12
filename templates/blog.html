@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{data.site.title}} | {{data.page.title}}</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      {% for i in data.nav_links %}
+      <a href="/{{i.url}}">{{ i.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <section class="hero center">
+      {{data.page.title}}
+    </section>
+
+    <main>
+      {% for i in data.collections %}
+      <a href="" style="text-decoration: none;">
+        <div class="article">
+          <p class="a-title">
+            {{i.title}}
+          </p>
+          <p class="a-date">{{i.date}}</p>
+        </div>
+      </a>
+      {%endfor%}
+    </main>
+
+    {{data}}
+
+    <footer>
+      <p>
+        &copy; {{data.site.year}} {{data.site.title}}
+      </p>
+    </footer>
+  </body>
+</html>

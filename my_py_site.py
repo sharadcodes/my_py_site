@@ -7,7 +7,6 @@ import commonmark
 
 from jinja2 import Template
 
-collections_metainfo_dict = {"collections": []}
 collections_metainfo_array = []
 
 with open('config.json') as json_file:
@@ -41,11 +40,8 @@ def generateCollections():
         createFile("_site"+filepath.replace("collections", "")+"/", filename.replace(".md",
                                                                                      ".html"), render_markdown_and_yml("templates/" + page["layout"] + ".html", page))
         # For addding this article to collections_metainfo dictionary
-        collections_metainfo_dict['collections'].append(
-            {page})
+        collections_metainfo_array.append(page)
         pass
-    print(collections_metainfo_dict)
-
 
 # for generating the pages which are inside pages folder
 def generatePages():
@@ -54,8 +50,9 @@ def generatePages():
         page = frontmatter.load(p)
         filepath, filename = os.path.split(p)
         page.__setattr__("content", commonmark.commonmark(page.content))
+        temp = {**page, **{"collections": collections_metainfo_array}}
         createFile("_site/", filename.replace(".md", ".html"),
-                   render_markdown_and_yml("templates/" + page["layout"] + ".html", page))
+                   render_markdown_and_yml("templates/" + page["layout"] + ".html", temp))
         pass
 
 

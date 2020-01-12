@@ -1,6 +1,4 @@
 ---
-layout: page
+layout: blog
 title: Blog
 ---
-
-This is blog page
