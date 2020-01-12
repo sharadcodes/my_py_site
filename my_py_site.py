@@ -24,6 +24,8 @@ def createFile(path, name, file_content):
 
 def render_markdown_and_yml(template_name, content):
     temp = {'page': content}
+    # for providing access to collections meta in pages
+    config_json_data["site"]["collections"] = collections_metainfo_array
     temp.update({**config_json_data, **temp})
     return Template(open(template_name).read()).render(data=temp)
 
@@ -35,6 +37,10 @@ def generateCollections():
         page = frontmatter.load(p)
         filepath, filename = os.path.split(p)
         page.__setattr__("content", commonmark.commonmark(page.content))
+
+        # for url to the article of that collection
+        page["url"] = filepath.replace("collections", "")+"/" + filename.replace(".md",".html")
+
         if not os.path.exists("_site"+filepath.replace("collections", "")+"/"):
             os.mkdir("_site"+filepath.replace("collections", "")+"/")
         createFile("_site"+filepath.replace("collections", "")+"/", filename.replace(".md",
@@ -44,15 +50,16 @@ def generateCollections():
         pass
 
 # for generating the pages which are inside pages folder
+
+
 def generatePages():
     all_pages = glob.glob("pages/*.md")
     for p in all_pages:
         page = frontmatter.load(p)
         filepath, filename = os.path.split(p)
         page.__setattr__("content", commonmark.commonmark(page.content))
-        temp = {**page, **{"collections": collections_metainfo_array}}
         createFile("_site/", filename.replace(".md", ".html"),
-                   render_markdown_and_yml("templates/" + page["layout"] + ".html", temp))
+                   render_markdown_and_yml("templates/" + page["layout"] + ".html", page))
         pass
 
 

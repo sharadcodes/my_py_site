@@ -20,8 +20,8 @@
     </section>
 
     <main>
-      {% for i in data.collections %}
-      <a href="" style="text-decoration: none;">
+      {% for i in data.site.collections %}
+      <a href="{{i.url}}" style="text-decoration: none;">
         <div class="article">
           <p class="a-title">
             {{i.title}}
