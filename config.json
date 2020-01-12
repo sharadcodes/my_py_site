@@ -1,0 +1,16 @@
+{
+    "site": {
+        "title": "My Py Site",
+        "author": "Dojo"
+    },
+    "nav_links": [
+        {
+            "title": "Home",
+            "url": "index.html"
+        },
+        {
+            "title": "About",
+            "url": "about.html"
+        }
+    ]
+}
