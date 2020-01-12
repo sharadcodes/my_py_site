@@ -169,6 +169,10 @@ footer a {
     format("woff");
 }
 
+.markdown-body img{
+  max-width: 50% !important;
+}
+
 .markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
