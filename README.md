@@ -6,8 +6,8 @@ The world's smallest and lightweight static site and blog generator for Python l
   * YML Front matter is supported
   * Jinja 2 Templates
   * Almost similary to Jekyll
-  * Deploy on Ntlify (Just fork and add it to netlify)
-  * Compatible with Ntlify CMS
+  * Deploy on Netlify (Just fork and add it to netlify)
+  * Compatible with Netlify CMS
   * Made in India :smile:
 
 [my_py_site](https://github.com/sharadcodes/my_py_site) is the most 
