@@ -62,12 +62,14 @@ def generateCollections():
         page.__setattr__("content", commonmark.commonmark(page.content))
 
         # for url to the article of that collection
-        page["url"] = filepath.replace("collections", "")+"/" + filename.replace(".md",".html")
+        page["url"] = filepath.replace(
+            "collections", "")+"/" + filename.replace(".md", ".html")
 
         if not os.path.exists("_site"+filepath.replace("collections", "")+"/"):
             os.mkdir("_site"+filepath.replace("collections", "")+"/")
         createFile("_site"+filepath.replace("collections", "")+"/", filename.replace(".md",
                                                                                      ".html"), render_markdown_and_yml("templates/" + page["layout"] + ".html", page))
+        print("Generating ",filename.replace(".md", ".html"))                                                                                     
         # For addding this article to collections_metainfo dictionary
         collections_metainfo_array.append(page)
         pass
@@ -83,6 +85,7 @@ def generatePages():
         page.__setattr__("content", commonmark.commonmark(page.content))
         createFile("_site/", filename.replace(".md", ".html"),
                    render_markdown_and_yml("templates/" + page["layout"] + ".html", page))
+        print("Generating ",filename.replace(".md", ".html"))
         pass
 
 
