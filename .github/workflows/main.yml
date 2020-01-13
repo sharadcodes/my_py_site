@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: FETCHING REQUIREMENTS
-      run: pip install -r requirements.txt
+      run: pip3 install -r requirements.txt
     - name: BUILDING
-      run: python my_py_site.py
+      run: python3 my_py_site.py
     # - name: Push changes to the sudo_site_demo repository
     #   run: |
     #    ls
