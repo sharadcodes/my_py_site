@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: FETCHING REQUIREMNETS
+    - name: FETCHING REQUIREMENTS
       run: pip install -r requirements.txt
     - name: BUILDING
       run: python my_py_site.py
