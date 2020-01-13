@@ -64,7 +64,7 @@ In the above config you for accessing the value of `title` inside `site` you wil
 ```python
 {{data.site.title}}
 ```
-in the templates. **data** is global and that is need for accessing the values of `config.json` file
+in the templates. **data** is global and it is needed for accessing the values of `config.json` file
 
 Similarly for looping over an array of objects like `social` you will do
 ```python
@@ -73,6 +73,8 @@ Similarly for looping over an array of objects like `social` you will do
   {{ i.id }}
 {% endfor %}
 ```
+
+**Anything inside `config.json` can be accessed from any of the templates**
 
 ## List of collections
 
