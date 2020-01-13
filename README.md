@@ -73,6 +73,7 @@ Similarly for looping over an array of objects like `social` you will do
   {{ i.id }}
 {% endfor %}
 ```
+[Actual code example](https://github.com/sharadcodes/my_py_site/blob/master/templates/post.html)
 
 **Anything inside `config.json` can be accessed from any of the templates**
 
@@ -92,6 +93,8 @@ To access list of articles inside `posts` folder you will do
   {{i.date or i.datetime}}
 {%endfor%}
 ```
+
+[Actual code example](https://github.com/sharadcodes/my_py_site/blob/master/templates/blog.html)
 
 ---
 
