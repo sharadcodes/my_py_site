@@ -106,4 +106,4 @@ To access list of articles inside `posts` folder you will do
 
 ---
 
-## For any help https://www.codingindian.codes/contact
+## For any help create an issue in the repo
